@@ -13,7 +13,7 @@ RecipeSchema = new SimpleSchema({
       type: String,
       label: "Author",
       autoValue: function() {
-         return this.userID
+         return this.userId
       },
       autoform: {
          type: "hidden"
@@ -30,5 +30,7 @@ RecipeSchema = new SimpleSchema({
       }
    }
 });
+
+// SimpleSchema.debug = true;
 
 Recipes.attachSchema( RecipeSchema );
