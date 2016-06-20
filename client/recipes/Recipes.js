@@ -1,3 +1,7 @@
+Template.Recipe.onCreated(function() {
+   this.editMode = new ReactiveVar(false)
+});
+
 Template.Recipes.onCreated(function () {
    var self = this;
    self.autorun(function () {
