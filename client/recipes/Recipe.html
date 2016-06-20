@@ -14,7 +14,9 @@
          {{else}}
             <button class="btn-primary toggle-menu">Add to Menu</button>
          {{/if}}
-         {{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
+         {{#if $.Session.get 'editMode'}}
+            {{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
+         {{/if}}
       </p>
    </article>
 </template>
