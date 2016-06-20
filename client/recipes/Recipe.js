@@ -9,6 +9,6 @@ Template.Recipe.events({
       Meteor.call('toggleMenuItem',this._id, this.inMenu);
    },
    'click .fa-trash' : function(){
-
+      Meteor.call('deleteRecipe', this._id);
    }
 });
