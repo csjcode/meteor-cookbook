@@ -7,8 +7,11 @@
             <span class="ingredient">{{name}} - {{amount}}</span>
          {{/each}}
          <a href="/recipe/{{_id}}">View Details</a>
-         <button class="btn-primary toggle-menu">Add to Menu</button>
-         <button class="btn-deny toggle-menu">Remove from Menu</button>
+         {{#if inMenu}}
+            <button class="btn-deny toggle-menu">Remove from Menu</button>
+         {{else}}
+            <button class="btn-primary toggle-menu">Add to Menu</button>
+         {{/if}}
       </p>
    </article>
 </template>
